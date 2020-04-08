@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zjc.devicemanage.activity.LoginActivity">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+        android:id="@+id/login_ll"
+        android:visibility="visible"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="130dp" >
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="账号"
+        android:background="@drawable/editor"
+        android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="密码"
+                android:layout_weight="2"
+                android:inputType="textPassword"
+                android:background="@drawable/editor"
+                android:layout_margin="10dp"/>
+
+
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:text="登   陆"
+        android:textColor="#FFFFFF"
+        android:layout_margin="10dp"/>
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/mob_ll"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="130dp" >
+        <EditText
+            android:id="@+id/mob_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="手机号"
+            android:background="@drawable/editor"
+            android:layout_margin="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/mob_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="验证码"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:background="@drawable/editor"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/mob_verification_send"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:text="发送验证码"
+            android:textColor="#8b8a8a" />
+    </LinearLayout>
+        <Button
+            android:id="@+id/mob_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF0000"
+            android:text="登   陆"
+            android:textColor="#FFFFFF"
+            android:layout_margin="10dp"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/mob_bttv"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="49dp"
+        android:layout_toLeftOf="@+id/qqlogin"
+        android:text="验证码登录"
+        android:textSize="18dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="49dp"
+        android:id="@+id/login_bttv"
+        android:layout_toLeftOf="@+id/qqlogin"
+        android:text="账号登录"
+        android:textSize="18dp" />
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/qqlogin"
+        android:onClick="qqlogin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/qq" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/reg_arcface"
+        android:layout_marginBottom="49dp"
+        android:layout_toRightOf="@+id/qqlogin"
+        android:text="人脸识别"
+        android:textSize="18dp" />
+
+</RelativeLayout>
+

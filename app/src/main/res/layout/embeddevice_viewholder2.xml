@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/embeddevice_viewholder2_ll">
+    <ImageView
+        android:background="@drawable/printer"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/embeddevice_viewholder2_device_iv"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/detail_1" />
+            <TextView
+                android:id="@+id/embeddevice_viewholder2_devicename_tv"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF4081"
+                android:textSize="20sp"
+                android:singleLine="true"
+                android:text="打印机"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/detail_2"/>
+            <TextView
+                android:id="@+id/embeddevice_viewholder2_deviceprice_tv"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1900"/>
+            <ImageView
+                android:id="@+id/embeddevice_viewholder2_addtoshopingcart"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:src="@drawable/shoppingcart_click" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

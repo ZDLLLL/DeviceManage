@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/information_viewholder_ll">
+    <ImageView
+        android:background="@drawable/info"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/information_viewholder_information_iv"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/detail_1" />
+            <TextView
+                android:id="@+id/information_viewholder_infocontent_tv"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF4081"
+                android:textSize="20sp"
+                android:singleLine="true"
+                android:text="惠普p1108"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/detail_3"/>
+            <TextView
+                android:id="@+id/information_viewholder_infocreatedtime_tv"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2017-12-11"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

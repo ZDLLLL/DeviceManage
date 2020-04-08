@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/deviceclass_viewholder_ll">
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/deviceclass_viewholder_iv"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/office"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/deviceclass_viewholder_tv"
+        android:gravity="center"
+        android:text="办公设备"
+        android:textColor="#000000"
+        android:textSize="16sp"/>
+</LinearLayout>
