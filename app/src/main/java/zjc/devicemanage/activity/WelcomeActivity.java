@@ -5,11 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
+
+import zjc.devicemanage.R;
 import zjc.devicemanage.util.MyApplication;
 
 public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_welcome);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().hide();
+        }
         // 获得偏好选项userid的值
         final String user_id = MyApplication.getUser_id();
         // 新建一个独立的线程

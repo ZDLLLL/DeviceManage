@@ -81,6 +81,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().hide();
+        }
         //传入参数APPID和全局Context上下文
         mTencent = Tencent.createInstance(APP_ID,LoginActivity.this.getApplicationContext());
         // 获得3个UI控件对象
@@ -283,6 +286,7 @@ public class LoginActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+    //初始化人脸识别的引擎
     public void InitEngine(){
         if (!checkPermissions(NEEDED_PERMISSIONS)) {
             ActivityCompat.requestPermissions(this, NEEDED_PERMISSIONS, ACTION_REQUEST_PERMISSIONS);
@@ -333,6 +337,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
+    //校验权限
     private boolean checkPermissions(String[] neededPermissions) {
         if (neededPermissions == null || neededPermissions.length == 0) {
             return true;

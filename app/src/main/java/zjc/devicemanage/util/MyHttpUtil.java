@@ -5,7 +5,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 
 public class MyHttpUtil {
-    public static String host = "http://192.168.137.1:8080";
+    public static String host = "http://192.168.0.104:8080";
     public static void sendOkhttpPostRequest(String address, RequestBody requestBody, Callback callback){
         OkHttpClient client=new OkHttpClient();
         Request request=new Request.Builder()

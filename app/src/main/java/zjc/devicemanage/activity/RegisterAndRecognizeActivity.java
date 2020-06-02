@@ -165,6 +165,9 @@ public class RegisterAndRecognizeActivity extends AppCompatActivity implements V
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().hide();
+        }
         setContentView(R.layout.activity_register_and_recognize);
         //保持亮屏
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -269,7 +272,7 @@ public class RegisterAndRecognizeActivity extends AppCompatActivity implements V
         }
     }
 
-
+//释放资源
     @Override
     protected void onDestroy() {
 
@@ -277,7 +280,7 @@ public class RegisterAndRecognizeActivity extends AppCompatActivity implements V
             cameraHelper.release();
             cameraHelper = null;
         }
-
+//销毁引擎
         unInitEngine();
         if (faceHelper != null) {
             ConfigUtil.setTrackedFaceCount(this, faceHelper.getTrackedFaceCount());
@@ -527,7 +530,7 @@ public class RegisterAndRecognizeActivity extends AppCompatActivity implements V
         cameraHelper.init();
         cameraHelper.start();
     }
-
+//注册人脸
     private void registerFace(final byte[] nv21, final List<FacePreviewInfo> facePreviewInfoList) {
 
         if (registerStatus == REGISTER_STATUS_READY && facePreviewInfoList != null && facePreviewInfoList.size() > 0) {
@@ -663,7 +666,7 @@ public class RegisterAndRecognizeActivity extends AppCompatActivity implements V
 
 
     }
-
+//搜索人脸
     private void searchFace(final FaceFeature frFace, final Integer requestId) {
         Observable
                 .create(new ObservableOnSubscribe<CompareResult>() {

@@ -12,6 +12,9 @@ public class InformationDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information_detail);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().hide();
+        }
         activity_infomation_detail_wv = findViewById(R.id.activity_infomation_detail_wv);
         //通过Bundle获得咨询编号参数
         Bundle bundle= getIntent().getExtras();
